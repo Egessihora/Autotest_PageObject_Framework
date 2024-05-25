@@ -3,7 +3,7 @@
 from selenium.webdriver.common.by import By
 
 
-class MainLocators:
-    """Локаторы главной страницы"""
+class AuthLocators:
+    """Локаторы страницы авторизации"""
 
-    MAIN_BUTTON = (By.ID, 'xxxxxxx')
+    AUTH_BUTTON_ENTER = (By.ID, "xxxxx")
