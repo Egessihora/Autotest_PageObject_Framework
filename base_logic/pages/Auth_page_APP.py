@@ -5,7 +5,7 @@ from base_logic.settings import *
 from base_logic.locators import *
 
 
-class MainPage(BasePage):
+class AuthPage(BasePage):
     def __init__(self, driver, timeout=10):
         super().__init__(driver, timeout)
         url = 'https://xxx.xxx.xxx.xxx'
