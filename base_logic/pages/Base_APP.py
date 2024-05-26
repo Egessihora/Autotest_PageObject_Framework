@@ -20,7 +20,7 @@ class BasePage:
     def get_relative_link(self):
         """Получает адрес текущей страницы"""
         url = urlparse(self.driver.current_url)
-        return url.path
+        return url.fragment
 
     def go_back(self):
         """Имитирует нажатие кнопки 'Назад' в браузере"""
@@ -40,6 +40,6 @@ class BasePage:
         return WebDriverWait(self.driver, time).until(EC.element_to_be_clickable(locator),
                                                       message=f'Element not clickable!')
 
-    def screenshot(self, directory='/Bug_screenshots/', file_name='screenshot'):
-        """Сохраняет скриншот"""
-        self.driver.save_screenshot('/tests/screenshots' + directory + file_name + '.png')
+        def screenshot(self, file_name='screenshot'):
+        """Сохраняет скриншот, принимает: название скриншота (по умолчанию 'screenshot')"""
+        self.driver.save_screenshot('../tests/screenshots/' + file_name + '.png')
